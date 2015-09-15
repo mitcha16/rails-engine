@@ -4,4 +4,8 @@ class Api::V1::InvoiceItemsController < ApplicationController
   def show
     respond_with InvoiceItem.find(params[:id])
   end
+
+  def find
+    render :json => finder(params)
+  end
 end

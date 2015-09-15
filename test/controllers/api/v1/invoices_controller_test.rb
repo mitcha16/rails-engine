@@ -9,4 +9,13 @@ class Api::V1::InvoicesControllerTest < ActionController::TestCase
     assert_equal 'bad', invoice[:status]
     assert_response :success
   end
+
+  test '#find json' do
+    get :find, format: :json, status: 'good'
+
+    invoice = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 'good', invoice[:status]
+    assert_response :success
+  end
 end
