@@ -4,6 +4,9 @@ Rails.application.routes.draw do
       resources :merchants
       resources :customers
       resources :invoices
+      resources :items
+      resources :invoice_items
+      resources :transactions
     end
   end
 end

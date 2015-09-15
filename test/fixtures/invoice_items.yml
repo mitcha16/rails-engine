@@ -3,7 +3,7 @@
 one:
   item_id: 1
   invoice_id: 2
-  quantity: MyString
+  quantity: 8
   unit_price: MyString
   created_at: DateTime.new(2001,2,3,4,5,6,'-7')
   updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
@@ -11,7 +11,7 @@ one:
 two:
   item_id: 1
   invoice_id: 2
-  quantity: MyString
+  quantity: 9
   unit_price: MyString
   created_at: DateTime.new(2001,2,3,4,5,6,'-7')
   updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
