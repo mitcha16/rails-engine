@@ -6,6 +6,6 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def find
-    render :json => finder(params)
+    respond_with Item.find_by_attribute(params)
   end
 end

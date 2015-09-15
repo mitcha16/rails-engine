@@ -6,6 +6,6 @@ class Api::V1::TransactionsController < ApplicationController
   end
 
   def find
-    render :json => finder(params)
+    respond_with Transaction.find_by_attribute(params)
   end
 end

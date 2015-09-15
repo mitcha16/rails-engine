@@ -6,6 +6,6 @@ class Api::V1::CustomersController < ApplicationController
   end
 
   def find
-    render :json => finder(params)
+    respond_with Customer.find_by_attribute(params)
   end
 end

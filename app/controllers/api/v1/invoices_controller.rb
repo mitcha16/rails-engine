@@ -6,6 +6,6 @@ class Api::V1::InvoicesController < ApplicationController
   end
 
   def find
-    render :json => finder(params)
+    respond_with Invoice.find_by_attribute(params)
   end
 end
