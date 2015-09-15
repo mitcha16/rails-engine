@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  references: 
+  invoice_id: 1
   credit_card_number: MyString
   credit_card_expiration_date: MyString
   result: MyString
-  created_at: MyString
-  updated_at: MyString
+  created_at: DateTime.new(2001,2,3,4,5,6,'-7')
+  updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
 
 two:
-  references: 
+  invoice_id: 2
   credit_card_number: MyString
   credit_card_expiration_date: MyString
   result: MyString
-  created_at: MyString
-  updated_at: MyString
+  created_at: DateTime.new(2001,2,3,4,5,6,'-7')
+  updated_at: DateTime.new(2001,2,3,4,5,6,'-7')

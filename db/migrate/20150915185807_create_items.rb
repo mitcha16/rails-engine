@@ -5,8 +5,8 @@ class CreateItems < ActiveRecord::Migration
       t.string :description
       t.string :unit_price
       t.integer :merchant_id
-      t.datetime :created_at
-      t.datetime :updated_at
+      t.string :created_at
+      t.string :updated_at
     end
   end
 end

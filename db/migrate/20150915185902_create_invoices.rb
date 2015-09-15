@@ -4,8 +4,8 @@ class CreateInvoices < ActiveRecord::Migration
       t.integer :customer_id
       t.integer :merchant_id
       t.string :status
-      t.datetime :created_at
-      t.datetime :updated_at
+      t.string :created_at
+      t.string :updated_at
     end
   end
 end
