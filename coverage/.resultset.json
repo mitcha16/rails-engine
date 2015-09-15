@@ -55,6 +55,15 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/mitchashby16/3module/projects/rails-engine/test/controllers/api/v1/transactions_controller_test.rb": [
@@ -143,13 +152,19 @@
       ],
       "/Users/mitchashby16/3module/projects/rails-engine/app/models/merchant.rb": [
         1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/mitchashby16/3module/projects/rails-engine/app/models/transaction.rb": [
         1,
         null
       ],
-      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/merchants_controller.rb": [
+      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/invoices_controller.rb": [
         1,
         1,
         null,
@@ -197,7 +212,21 @@
         1,
         null
       ],
-      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/invoices_controller.rb": [
+      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/merchants_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/items_controller.rb": [
         1,
         1,
         null,
@@ -232,17 +261,8 @@
         1,
         null,
         null
-      ],
-      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/items_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null
       ]
     },
-    "timestamp": 1442347289
+    "timestamp": 1442350601
   }
 }
