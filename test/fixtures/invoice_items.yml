@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  references: 
+  references: 
+  quantity: MyString
+  unit_price: MyString
+  created_at: MyString
+  updated_at: MyString
+
+two:
+  references: 
+  references: 
+  quantity: MyString
+  unit_price: MyString
+  created_at: MyString
+  updated_at: MyString
