@@ -9,7 +9,7 @@ class Api::V1::MerchantsController < ApplicationController
     respond_with Merchant.find_by_attribute(params)
   end
 
-  # def find_all
-  #   render :json => find_all_matches(params)
-  # end
+  def find_all
+    respond_with Merchant.find_all_matches(params)
+  end
 end

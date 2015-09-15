@@ -8,4 +8,8 @@ class Api::V1::InvoiceItemsController < ApplicationController
   def find
     respond_with InvoiceItem.find_by_attribute(params)
   end
+
+  def find_all
+    respond_with InvoiceItem.find_all_matches(params)
+  end
 end

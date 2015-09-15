@@ -5,13 +5,13 @@ one:
   credit_card_number: MyString
   credit_card_expiration_date: MyString
   result: good
-  created_at: DateTime.new(2001,2,3,4,5,6,'-7')
-  updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
+  created_at: date
+  updated_at: date
 
 two:
   invoice_id: 2
   credit_card_number: MyString
   credit_card_expiration_date: MyString
   result: bad
-  created_at: DateTime.new(2001,2,3,4,5,6,'-7')
-  updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
+  created_at: date
+  updated_at: date

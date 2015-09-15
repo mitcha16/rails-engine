@@ -18,4 +18,13 @@ class Api::V1::TransactionsControllerTest < ActionController::TestCase
     assert_equal 'bad', transaction[:result]
     assert_response :success
   end
+
+  test '#find_all json' do
+    get :find_all, format: :json, created_at: 'date'
+
+    transactions = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 2, transactions.size
+    assert_response :success
+  end
 end

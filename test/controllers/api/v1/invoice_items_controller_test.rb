@@ -18,4 +18,13 @@ class Api::V1::InvoiceItemsControllerTest < ActionController::TestCase
     assert_equal '8', ii[:quantity]
     assert_response :success
   end
+
+  test '#find_all json' do
+    get :find_all, format: :json, created_at: 'date'
+
+    ii = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 2, ii.size
+    assert_response :success
+  end
 end

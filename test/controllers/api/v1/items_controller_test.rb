@@ -18,4 +18,13 @@ class Api::V1::ItemsControllerTest < ActionController::TestCase
     assert_equal 'item 1', item[:name]
     assert_response :success
   end
+
+  test '#find_all json' do
+    get :find_all, format: :json, created_at: 'date'
+
+    items = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 2, items.size
+    assert_response :success
+  end
 end

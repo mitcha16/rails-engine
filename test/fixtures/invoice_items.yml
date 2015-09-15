@@ -5,13 +5,13 @@ one:
   invoice_id: 2
   quantity: 8
   unit_price: MyString
-  created_at: DateTime.new(2001,2,3,4,5,6,'-7')
-  updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
+  created_at: date
+  updated_at: date
 
 two:
   item_id: 1
   invoice_id: 2
   quantity: 9
   unit_price: MyString
-  created_at: DateTime.new(2001,2,3,4,5,6,'-7')
-  updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
+  created_at: date
+  updated_at: date
