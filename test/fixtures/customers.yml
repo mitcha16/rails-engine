@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first_name: MyString
+  first_name: Mitch
   last_name: MyString
   created_at: DateTime.new(2001,2,3,4,5,6,'-7')
   updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
 
 two:
-  first_name: MyString
+  first_name: Mike
   last_name: MyString
   created_at: DateTime.new(2001,2,3,4,5,6,'-7')
   updated_at: DateTime.new(2001,2,3,4,5,6,'-7')

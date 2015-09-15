@@ -3,13 +3,13 @@
 one:
   customer_id: 1
   merchant_id: 2
-  status: MyString
+  status: good
   created_at: DateTime.new(2001,2,3,4,5,6,'-7')
   updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
 
 two:
   customer_id: 1
   merchant_id: 2
-  status: MyString
+  status: bad
   created_at: DateTime.new(2001,2,3,4,5,6,'-7')
   updated_at: DateTime.new(2001,2,3,4,5,6,'-7')
