@@ -3,7 +3,6 @@
 one:
   invoice_id: 1
   credit_card_number: MyString
-  credit_card_expiration_date: MyString
   result: good
   created_at: date
   updated_at: date
@@ -11,7 +10,6 @@ one:
 two:
   invoice_id: 2
   credit_card_number: MyString
-  credit_card_expiration_date: MyString
   result: bad
   created_at: date
   updated_at: date

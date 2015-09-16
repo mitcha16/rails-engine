@@ -74,7 +74,6 @@ class Seed
       Transaction.create(id: line[:id], invoice_id: line[:invoice_id],
       created_at: line[:created_at], updated_at: line[:updated_at],
       credit_card_number: line[:credit_card_number],
-      credit_card_expiration_date: line[:credit_card_expiration_date],
       result: line[:result] )
     end
   end

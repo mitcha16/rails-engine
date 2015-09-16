@@ -6,15 +6,15 @@ class Api::V1::InvoicesController < ApplicationController
   end
 
   def find
-    respond_with Invoice.find_by_attribute(params)
+    respond_with Invoice.find_by(invoice_params)
   end
 
   def find_all
-    respond_with Invoice.find_all_matches(params)
+    respond_with Invoice.where(invoice_params)
   end
 
   def random
-    respond_with Invoice.random(params)
+    respond_with Invoice.all.sample
   end
 
   def transactions
@@ -35,5 +35,11 @@ class Api::V1::InvoicesController < ApplicationController
 
   def merchant
     respond_with Invoice.find(params[:id]).merchant
+  end
+
+  private
+
+  def invoice_params
+    params.permit(:id, :status, :customer_id, :merchant_id, :created_at, :updated_at)
   end
 end

@@ -58,7 +58,6 @@ ActiveRecord::Schema.define(version: 20150915190025) do
   create_table "transactions", force: :cascade do |t|
     t.integer "invoice_id"
     t.string  "credit_card_number"
-    t.string  "credit_card_expiration_date"
     t.string  "result"
     t.string  "created_at"
     t.string  "updated_at"

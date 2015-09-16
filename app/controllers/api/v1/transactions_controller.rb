@@ -6,18 +6,24 @@ class Api::V1::TransactionsController < ApplicationController
   end
 
   def find
-    respond_with Transaction.find_by_attribute(params)
+    respond_with Transaction.find_by(transaction_params)
   end
 
   def find_all
-    respond_with Transaction.find_all_matches(params)
+    respond_with Transaction.where(transaction_params)
   end
 
   def random
-    respond_with Transaction.random(params)
+    respond_with Item.all.sample
   end
 
   def invoice
     respond_with Transaction.find(params[:id]).invoice
+  end
+
+  private
+
+  def transaction_params
+    params.permit(:id, :invoice_id, :credit_card_number, :result, :created_at, :updated_at)
   end
 end
