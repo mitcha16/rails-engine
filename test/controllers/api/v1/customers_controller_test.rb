@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Api::V1::CustomersControllerTest < ActionController::TestCase
   test '#show json' do
-    get :show, format: :json, id: Customer.first.id
+    get :show, format: :json, id: Customer.last.id
 
     customer = JSON.parse(response.body, symbolize_names: :true)
 
@@ -31,6 +31,24 @@ class Api::V1::CustomersControllerTest < ActionController::TestCase
   test '#random json' do
     get :random, format: :json
 
+    assert_response :success
+  end
+
+  test '#invoices json' do
+    get :invoices, format: :json, id: Customer.first.id
+
+    invoices = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 2, invoices.size
+    assert_response :success
+  end
+
+  test '#transactions json' do
+    get :transactions, format: :json, id: Customer.first.id
+
+    transactions = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 2, transactions.size
     assert_response :success
   end
 end

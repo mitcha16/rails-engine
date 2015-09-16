@@ -33,4 +33,13 @@ class Api::V1::TransactionsControllerTest < ActionController::TestCase
 
     assert_response :success
   end
+
+  test '#invoice json' do
+    get :invoice, format: :json, id: Transaction.first.id
+
+    invoice = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 'bad', invoice[:status]
+    assert_response :success
+  end
 end

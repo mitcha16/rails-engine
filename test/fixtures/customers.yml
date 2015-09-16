@@ -1,12 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   first_name: Mitch
   last_name: MyString
   created_at: date
   updated_at: date
 
 two:
+  id: 2
   first_name: Mike
   last_name: MyString
   created_at: date

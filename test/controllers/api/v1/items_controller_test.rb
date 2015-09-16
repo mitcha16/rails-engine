@@ -33,4 +33,22 @@ class Api::V1::ItemsControllerTest < ActionController::TestCase
 
     assert_response :success
   end
+
+  test '#invoice_items json' do
+    get :invoice_items, format: :json, id: Item.first.id
+
+    ii = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 2, ii.size
+    assert_response :success
+  end
+
+  test '#merchant json' do
+    get :merchant, format: :json, id: Item.first.id
+
+    merchant = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 'merchant 1', merchant[:name]
+    assert_response :success
+  end
 end
