@@ -12,4 +12,8 @@ class Api::V1::ItemsController < ApplicationController
   def find_all
     respond_with Item.find_all_matches(params)
   end
+
+  def random
+    respond_with Item.random(params)
+  end
 end

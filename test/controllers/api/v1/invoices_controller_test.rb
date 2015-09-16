@@ -27,4 +27,10 @@ class Api::V1::InvoicesControllerTest < ActionController::TestCase
     assert_equal 2, invoices.size
     assert_response :success
   end
+
+  test '#random json' do
+    get :random, format: :json
+
+    assert_response :success
+  end
 end

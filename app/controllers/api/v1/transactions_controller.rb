@@ -12,4 +12,8 @@ class Api::V1::TransactionsController < ApplicationController
   def find_all
     respond_with Transaction.find_all_matches(params)
   end
+
+  def random
+    respond_with Transaction.random(params)
+  end
 end

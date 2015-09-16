@@ -12,4 +12,8 @@ class Api::V1::MerchantsController < ApplicationController
   def find_all
     respond_with Merchant.find_all_matches(params)
   end
+
+  def random
+    respond_with Merchant.random(params)
+  end
 end

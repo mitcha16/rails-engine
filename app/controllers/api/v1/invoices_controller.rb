@@ -12,4 +12,8 @@ class Api::V1::InvoicesController < ApplicationController
   def find_all
     respond_with Invoice.find_all_matches(params)
   end
+
+  def random
+    respond_with Invoice.random(params)
+  end
 end

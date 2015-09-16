@@ -12,4 +12,8 @@ class Api::V1::CustomersController < ApplicationController
   def find_all
     respond_with Customer.find_all_matches(params)
   end
+
+  def random
+    respond_with Customer.random(params)
+  end
 end
