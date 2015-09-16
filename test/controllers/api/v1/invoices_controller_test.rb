@@ -20,7 +20,7 @@ class Api::V1::InvoicesControllerTest < ActionController::TestCase
   end
 
   test '#find_all json' do
-    get :find_all, format: :json, created_at: 'date'
+    get :find_all, format: :json, created_at: '2012-03-27 14:53:59 UTC'
 
     invoices = JSON.parse(response.body, symbolize_names: :true)
 
