@@ -8,4 +8,9 @@ class Invoice < ActiveRecord::Base
   def self.success
     joins(:transactions).where("result = 'success'")
   end
+
+
+  def self.date(params)
+    self.find_by_sql("SELECT * FROM invoices WHERE 'created_at' = '#{params[:date]}'")
+  end
 end

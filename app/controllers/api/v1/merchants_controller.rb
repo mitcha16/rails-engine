@@ -1,6 +1,10 @@
 class Api::V1::MerchantsController < ApplicationController
   respond_to :json
 
+  def index
+    respond_with Merchant.all
+  end
+
   def show
     respond_with Merchant.find(params[:id])
   end
@@ -31,6 +35,10 @@ class Api::V1::MerchantsController < ApplicationController
 
   def revenue
     respond_with Merchant.find(params[:id]).revenue
+  end
+
+  def revenue_by_date
+    respond_with Merchant.revenue_by_date(params)
   end
 
   private

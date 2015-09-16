@@ -1,4 +1,3 @@
-
 class Merchant < ActiveRecord::Base
   has_many :items
   has_many :invoices
@@ -11,6 +10,13 @@ class Merchant < ActiveRecord::Base
     all.max(params[:quantity].to_i) do |merchant|
       merchant.calculate_revenue
     end
+  end
+
+  def self.revenue_by_date(params)
+    revenue = Invoice.success.where("invoices.created_at = '#{params[:date]}'").
+    joins(:invoice_items).sum(('quantity * unit_price'))
+
+    {total_revenue: "#{revenue}"}
   end
 
   def calculate_revenue
