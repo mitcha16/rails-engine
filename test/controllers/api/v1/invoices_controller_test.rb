@@ -75,7 +75,7 @@ class Api::V1::InvoicesControllerTest < ActionController::TestCase
 
     merchant = JSON.parse(response.body, symbolize_names: :true)
 
-    assert_equal 'merchant 2', merchant[:name]
+    assert_equal 'merchant 1', merchant[:name]
     assert_response :success
   end
 end

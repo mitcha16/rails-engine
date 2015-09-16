@@ -6,7 +6,7 @@ class Api::V1::InvoiceItemsControllerTest < ActionController::TestCase
 
     ii = JSON.parse(response.body, symbolize_names: :true)
 
-    assert_equal '9', ii[:quantity]
+    assert_equal 9.0, ii[:quantity]
     assert_response :success
   end
 
@@ -15,7 +15,7 @@ class Api::V1::InvoiceItemsControllerTest < ActionController::TestCase
 
     ii = JSON.parse(response.body, symbolize_names: :true)
 
-    assert_equal '8', ii[:quantity]
+    assert_equal 8.0, ii[:quantity]
     assert_response :success
   end
 

@@ -9,12 +9,12 @@ end
 class Seed
   def self.start
     get_info
-    create_merchants
     create_customers
     create_items
     create_invoices
     create_invoice_items
     create_transactions
+    create_merchants
   end
 
   def self.get_info

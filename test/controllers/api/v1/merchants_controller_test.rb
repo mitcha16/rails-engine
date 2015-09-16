@@ -49,4 +49,20 @@ class Api::V1::MerchantsControllerTest < ActionController::TestCase
     assert_equal 'good', invoice.first[:status]
     assert_response :success
   end
+
+  test '#most_revenue json' do
+    get :most_revenue, format: :json, quantity: 1
+    merchants = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 'merchant 1', merchants.first[:name]
+    assert_response :success
+  end
+
+  test '#revenue json' do
+    get :revenue, format: :json, id: Merchant.last.id
+    revenue = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal '0.0', revenue[:revenue]
+    assert_response :success
+  end
 end
