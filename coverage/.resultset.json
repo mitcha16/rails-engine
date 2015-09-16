@@ -151,6 +151,14 @@
         null,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/mitchashby16/3module/projects/rails-engine/test/controllers/api/v1/transactions_controller_test.rb": [
@@ -296,9 +304,11 @@
       "/Users/mitchashby16/3module/projects/rails-engine/app/models/item.rb": [
         1,
         1,
+        1,
         null
       ],
       "/Users/mitchashby16/3module/projects/rails-engine/app/models/merchant.rb": [
+        1,
         1,
         1,
         null
@@ -308,7 +318,7 @@
         1,
         null
       ],
-      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/invoices_controller.rb": [
+      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/transactions_controller.rb": [
         1,
         1,
         null,
@@ -366,28 +376,7 @@
         1,
         null
       ],
-      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/items_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/customers_controller.rb": [
+      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/invoice_items_controller.rb": [
         1,
         1,
         null,
@@ -427,30 +416,55 @@
         1,
         1,
         null,
-        null
-      ],
-      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/transactions_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
         null,
         1,
         1,
         null,
         null
       ],
-      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/invoice_items_controller.rb": [
+      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/customers_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/items_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/mitchashby16/3module/projects/rails-engine/app/controllers/api/v1/invoices_controller.rb": [
         1,
         1,
         null,
@@ -472,6 +486,6 @@
         null
       ]
     },
-    "timestamp": 1442366591
+    "timestamp": 1442420016
   }
 }

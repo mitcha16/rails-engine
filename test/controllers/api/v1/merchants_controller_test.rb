@@ -6,7 +6,7 @@ class Api::V1::MerchantsControllerTest < ActionController::TestCase
 
     merchant = JSON.parse(response.body, symbolize_names: :true)
 
-    assert_equal 'merchant 2', merchant[:name]
+    assert_equal 'merchant 1', merchant[:name]
     assert_response :success
   end
 
@@ -31,6 +31,14 @@ class Api::V1::MerchantsControllerTest < ActionController::TestCase
   test '#random json' do
     get :random, format: :json
 
+    assert_response :success
+  end
+
+  test '#items relationships json' do
+    get :items, format: :json, id: Merchant.first.id
+    items = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 2, items.size
     assert_response :success
   end
 end
