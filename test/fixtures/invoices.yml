@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   customer_id: 1
-  merchant_id: 2
+  merchant_id: 1
   status: good
   created_at: date
   updated_at: date
 
 two:
+  id: 2
   customer_id: 1
   merchant_id: 2
   status: bad

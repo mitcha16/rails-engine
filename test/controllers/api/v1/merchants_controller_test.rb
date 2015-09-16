@@ -41,4 +41,12 @@ class Api::V1::MerchantsControllerTest < ActionController::TestCase
     assert_equal 2, items.size
     assert_response :success
   end
+
+  test '#invoices relationships json' do
+    get :invoices, format: :json, id: Merchant.first.id
+    invoice = JSON.parse(response.body, symbolize_names: :true)
+
+    assert_equal 'good', invoice.first[:status]
+    assert_response :success
+  end
 end
