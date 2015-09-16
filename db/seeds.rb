@@ -1,4 +1,5 @@
 require 'csv'
+require 'bigdecimal'
 class FileReader
   def read(file)
     CSV.open "#{file}", headers: true, header_converters: :symbol
@@ -45,7 +46,7 @@ class Seed
     @items.each do |line|
       Item.create(id: line[:id], name: line[:name],
       created_at: line[:created_at], updated_at: line[:updated_at],
-      description: line[:description], unit_price: line[:unit_price],
+      description: line[:description], unit_price: BigDecimal.new(line[:unit_price].insert(-3, ".")),
       merchant_id: line[:merchant_id] )
     end
   end
@@ -64,7 +65,7 @@ class Seed
       InvoiceItem.create(id: line[:id], item_id: line[:item_id],
       created_at: line[:created_at], updated_at: line[:updated_at],
       invoice_id: line[:invoice_id], quantity: line[:quantity],
-      unit_price: line[:unit_price] )
+      unit_price: BigDecimal.new(line[:unit_price].insert(-3, ".")) )
     end
   end
 
