@@ -9,14 +9,14 @@ Rails.application.routes.draw do
       get 'merchants/most_revenue', to: 'merchants#most_revenue'
       get 'merchants/:id/revenue', to: 'merchants#revenue'
       get 'merchants/revenue', to: 'merchants#revenue_by_date'
-      resources :merchants, only: [:show]
+      resources :merchants, only: [:show, :index]
 
       get 'customers/find', to: 'customers#find'
       get 'customers/find_all', to: 'customers#find_all'
       get 'customers/random', to: 'customers#random'
       get 'customers/:id/invoices', to: 'customers#invoices'
       get 'customers/:id/transactions', to: 'customers#transactions'
-      resources :customers, only: [:show]
+      resources :customers, only: [:show, :index]
 
       get 'invoices/find', to: 'invoices#find'
       get 'invoices/find_all', to: 'invoices#find_all'
@@ -26,27 +26,27 @@ Rails.application.routes.draw do
       get 'invoices/:id/items', to: 'invoices#items'
       get 'invoices/:id/customer', to: 'invoices#customer'
       get 'invoices/:id/merchant', to: 'invoices#merchant'
-      resources :invoices, only: [:show]
+      resources :invoices, only: [:show, :index]
 
       get 'items/find', to: 'items#find'
       get 'items/find_all', to: 'items#find_all'
       get 'items/random', to: 'items#random'
       get 'items/:id/invoice_items', to: 'items#invoice_items'
       get 'items/:id/merchant', to: 'items#merchant'
-      resources :items, only: [:show]
+      resources :items, only: [:show, :index]
 
       get 'invoice_items/find', to: 'invoice_items#find'
       get 'invoice_items/find_all', to: 'invoice_items#find_all'
       get 'invoice_items/random', to: 'invoice_items#random'
       get 'invoice_items/:id/invoice', to: 'invoice_items#invoice'
       get 'invoice_items/:id/item', to: 'invoice_items#item'
-      resources :invoice_items, only: [:show]
+      resources :invoice_items, only: [:show, :index]
 
       get 'transactions/find', to: 'transactions#find'
       get 'transactions/find_all', to: 'transactions#find_all'
       get 'transactions/random', to: 'transactions#random'
       get 'transactions/:id/invoice', to: 'transactions#invoice'
-      resources :transactions, only: [:show]
+      resources :transactions, only: [:show, :index]
     end
   end
 end

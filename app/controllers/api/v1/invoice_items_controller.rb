@@ -6,7 +6,9 @@ class Api::V1::InvoiceItemsController < ApplicationController
   end
 
   def show
-    respond_with InvoiceItem.find(params[:id])
+    invoice_item = InvoiceItem.find(params[:id]).attributes
+    invoice_item['unit_price'] = invoice_item['unit_price'].to_s
+    respond_with invoice_item
   end
 
   def find
