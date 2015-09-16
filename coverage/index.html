@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-09-15T18:21:00-06:00">2015-09-15T18:21:00-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-09-15T19:23:11-06:00">2015-09-15T19:23:11-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -203,7 +203,7 @@
       <tr>
         <td class="strong"><a href="#2ebf4cfd55a6881c03ba0979f7da05703f003280" class="src_link" title="app/models/concerns/finder.rb">app/models/concerns/finder.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>30</td>
+        <td>31</td>
         <td>17</td>
         <td>17</td>
         <td>0</td>
@@ -1511,148 +1511,154 @@
         <li class="covered" data-hits="6" data-linenumber="6">
           <span class="hits">6</span>
           
-          <code class="ruby">      sql = &quot;SELECT * FROM #{params[:controller].split(&quot;/&quot;).last.capitalize}</code>
+          <code class="ruby">      ActiveRecord::Base.connection.execute(get_sql(params)).first</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">      WHERE #{params.keys.first}=&#39;#{params.values.first}&#39;;&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="8">
-          <span class="hits">6</span>
-          
-          <code class="ruby">      ActiveRecord::Base.connection.execute(sql).first</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">    def find_all_matches(params)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="12">
+        <li class="covered" data-hits="6" data-linenumber="10">
           <span class="hits">6</span>
           
-          <code class="ruby">      sql = &quot;SELECT * FROM #{params[:controller].split(&quot;/&quot;).last.capitalize}</code>
+          <code class="ruby">      results = ActiveRecord::Base.connection.execute(get_sql(params))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">      WHERE #{params.keys.first}=&#39;#{params.values.first}&#39;;&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="14">
-          <span class="hits">6</span>
-          
-          <code class="ruby">      results = ActiveRecord::Base.connection.execute(sql)</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="15">
+        <li class="covered" data-hits="6" data-linenumber="11">
           <span class="hits">6</span>
           
           <code class="ruby">      results.map do |result|</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="16">
+        <li class="covered" data-hits="12" data-linenumber="12">
           <span class="hits">12</span>
           
           <code class="ruby">        result</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">    def random(params)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="21">
+        <li class="covered" data-hits="6" data-linenumber="17">
           <span class="hits">6</span>
           
           <code class="ruby">      size = &quot;SELECT COUNT(1) FROM #{params[:controller].split(&quot;/&quot;).last.capitalize}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="22">
+        <li class="covered" data-hits="6" data-linenumber="18">
           <span class="hits">6</span>
           
           <code class="ruby">      table_size = ActiveRecord::Base.connection.execute(size).first[&#39;count&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="23">
+        <li class="covered" data-hits="6" data-linenumber="19">
           <span class="hits">6</span>
           
           <code class="ruby">      random = Random.new.rand(table_size.to_i)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="25">
+        <li class="covered" data-hits="6" data-linenumber="21">
           <span class="hits">6</span>
           
           <code class="ruby">      sql = &quot;SELECT * FROM #{params[:controller].split(&quot;/&quot;).last.capitalize}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">      WHERE id=&#39;#{random}&#39;;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="27">
+        <li class="covered" data-hits="6" data-linenumber="23">
           <span class="hits">6</span>
           
           <code class="ruby">      ActiveRecord::Base.connection.execute(sql).first</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def get_sql(params)</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="27">
+          <span class="hits">12</span>
+          
+          <code class="ruby">      &quot;SELECT * FROM #{params[:controller].split(&quot;/&quot;).last.capitalize}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">      WHERE #{params.keys.first}=&#39;#{params.values.first}&#39;;&quot;</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
