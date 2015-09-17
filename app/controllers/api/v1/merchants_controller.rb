@@ -34,11 +34,19 @@ class Api::V1::MerchantsController < ApplicationController
   end
 
   def revenue
-    respond_with Merchant.find(params[:id]).revenue
+    respond_with Merchant.find(params[:id]).revenue(params)
   end
 
   def revenue_by_date
     respond_with Merchant.revenue_by_date(params)
+  end
+
+  def most_items
+    respond_with Merchant.most_items(params)
+  end
+
+  def favorite
+        respond_with Merchant.find(params[:id]).favorite
   end
 
   private
